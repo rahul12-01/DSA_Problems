@@ -1,12 +1,4 @@
 class Solution {
-    // public int freq(char[] chars,char ch){
-    //     int count =0;
-    //     for (int i=0;i<chars.length-1;i++){
-    //         if (chars[i]==chars[i+1])
-    //             count++;
-    //     }
-    //     return count ;
-    // }
     public int compress(char[] chars) {
         int count =1;
         int res=0;
@@ -27,7 +19,7 @@ class Solution {
         if (count>1)
             for (int k=0;k<(count+"").length();k++)
             chars[res++]=(count+"").charAt(k);
-        System.out.println(Arrays.toString(chars));
+        // System.out.println(Arrays.toString(chars));
         return res;
     }
 }
