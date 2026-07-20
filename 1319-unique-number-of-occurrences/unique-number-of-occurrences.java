@@ -13,6 +13,6 @@ class Solution {
             mp.put(i,count(arr,i));
         }
         // System.out.println(mp);
-        return (new ArrayList<>(mp.values()).size()==new HashSet<>(mp.values()).size());
+        return (mp.size()==new HashSet<>(mp.values()).size());
     }
 }
