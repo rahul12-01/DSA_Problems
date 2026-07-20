@@ -5,7 +5,6 @@ class Solution {
         Set<Integer>  h1 = new HashSet<>();
         List <Integer> temp = new ArrayList<>();
         List <Integer> temp1 = new ArrayList<>();
-
         List<List<Integer>> res = new ArrayList<>();
 
         for (int n:nums1){
@@ -14,6 +13,7 @@ class Solution {
         for (int n:nums2){
             h2.add(n);
         } 
+
         for (int n:h1){
             if (!h2.contains(n)){
                 temp.add(n);
@@ -24,8 +24,8 @@ class Solution {
                 temp1.add(n);
             }
         }
-        res.add(new ArrayList<>(temp));
-        res.add(new ArrayList<>(temp1));
+        res.add(temp);
+        res.add(temp1);
 
         return res;
     }
