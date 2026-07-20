@@ -12,9 +12,7 @@ class Solution {
         for (int i:arr){
             mp.put(i,count(arr,i));
         }
-        System.out.println(mp);
-        List<Integer> l= new ArrayList<>(mp.values());
-        Set <Integer> h = new HashSet<>(mp.values());
-        return (l.size()==h.size());
+        // System.out.println(mp);
+        return (new ArrayList<>(mp.values()).size()==new HashSet<>(mp.values()).size());
     }
 }
