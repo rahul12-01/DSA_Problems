@@ -15,8 +15,6 @@ class Solution {
         System.out.println(mp);
         List<Integer> l= new ArrayList<>(mp.values());
         Set <Integer> h = new HashSet<>(mp.values());
-        if (l.size()==h.size())
-            return true ;
-        return false;
+        return (l.size()==h.size());
     }
 }
