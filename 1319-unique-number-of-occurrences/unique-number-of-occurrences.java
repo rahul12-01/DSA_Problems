@@ -1,16 +1,9 @@
 class Solution {
-    public int count (int[] arr, int num){
-        int count =0;
-        for (int n:arr){
-            if (n==num)
-                count++;
-        }
-        return count ;
-    }
+
     public boolean uniqueOccurrences(int[] arr) {
         Map <Integer,Integer> mp = new HashMap<>();
         for (int i:arr){
-            mp.put(i,count(arr,i));
+        mp.put(i, mp.getOrDefault(i, 0) + 1);
         }
         // System.out.println(mp);
         return (mp.size()==new HashSet<>(mp.values()).size());
