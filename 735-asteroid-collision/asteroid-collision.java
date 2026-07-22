@@ -7,38 +7,16 @@ class Solution {
                 stack.push(asteroids[n]);
             }
             if(asteroids[n]<0){
-                // if (stack.peek()==asteroids[n]*-1){
-                //     stack.pop();
-                //     continue;
-                // }
-                // else if (stack.peek()>asteroids[n]*-1)
-                //     continue;
-                // while (!stack.isEmpty() &&stack.peek() > 0 &&stack.peek() <-asteroids[n]) {
-                //     stack.pop();
-                // }
-                // if (stack.isEmpty() || stack.peek() < 0) {
-                //     stack.push(asteroids[n]);
-                // }
-                while (!stack.isEmpty()
-        && stack.peek() > 0
-        && stack.peek() < -asteroids[n]) {
-    stack.pop();
-}
-
-if (stack.isEmpty() || stack.peek() < 0) {
-    // Koi collision nahi bachi
-    stack.push(asteroids[n]);
-}
-else if (stack.peek() == -asteroids[n]) {
-    // Dono same size ke hain
-    stack.pop();
-}
-else {
-    // stack.peek() > -asteroids[n]
-    // Current negative asteroid destroy ho gaya.
-    // Kuch nahi karna.
-    continue;
-}
+                while (!stack.isEmpty() &&stack.peek() > 0 &&stack.peek() <-asteroids[n]) {
+                    stack.pop();
+                }
+                if (stack.isEmpty() || stack.peek() < 0) {
+                    stack.push(asteroids[n]);
+                }
+                else if (stack.peek()==asteroids[n]*-1)
+                    stack.pop();
+                else 
+                    continue;
             }
             
         }
